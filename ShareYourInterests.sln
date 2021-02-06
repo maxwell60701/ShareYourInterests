@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareYourInterests.MVC", "ShareYourInterests\ShareYourInterests.MVC.csproj", "{94FA1917-45D1-49C5-BAFA-8D6093F268A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareYourInterests.MVC", "ShareYourInterests\ShareYourInterests.MVC.csproj", "{94FA1917-45D1-49C5-BAFA-8D6093F268A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareYourInterests.WebApi", "ShareYourInterests.WebApi\ShareYourInterests.WebApi.csproj", "{71C8A49F-EF69-411F-A371-7744A0C18196}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareYourInterests.WebApi", "ShareYourInterests.WebApi\ShareYourInterests.WebApi.csproj", "{71C8A49F-EF69-411F-A371-7744A0C18196}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareYourInterests.Entity", "ShareYourInterests.Entity\ShareYourInterests.Entity.csproj", "{D4BCC0CA-0291-4890-936E-F93403E0648E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareYourInterests.Entity", "ShareYourInterests.Entity\ShareYourInterests.Entity.csproj", "{D4BCC0CA-0291-4890-936E-F93403E0648E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareYourInterests.Application", "ShareYourInterests.Application\ShareYourInterests.Application.csproj", "{E0888B96-1D8B-41DD-BC02-88FFFDE47F35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareYourInterests.Application", "ShareYourInterests.Application\ShareYourInterests.Application.csproj", "{E0888B96-1D8B-41DD-BC02-88FFFDE47F35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareYourInterests.Infrastructure", "ShareYourInterests.Infrastructure\ShareYourInterests.Infrastructure.csproj", "{9FB90838-3F2C-42F8-B1DE-DC6E72EDB963}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareYourInterests.Infrastructure", "ShareYourInterests.Infrastructure\ShareYourInterests.Infrastructure.csproj", "{9FB90838-3F2C-42F8-B1DE-DC6E72EDB963}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareYourInterests.ConsoleTest", "ShareYourInterests.ConsoleTest\ShareYourInterests.ConsoleTest.csproj", "{DB37992E-2E0F-4E18-8201-EE29D0FD1FC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareYourInterests.ConsoleTest", "ShareYourInterests.ConsoleTest\ShareYourInterests.ConsoleTest.csproj", "{DB37992E-2E0F-4E18-8201-EE29D0FD1FC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareYourInterests.Migration", "ShareYourInterests.Migration\ShareYourInterests.Migration.csproj", "{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,14 @@ Global
 		{DB37992E-2E0F-4E18-8201-EE29D0FD1FC2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DB37992E-2E0F-4E18-8201-EE29D0FD1FC2}.Release|x64.ActiveCfg = Release|Any CPU
 		{DB37992E-2E0F-4E18-8201-EE29D0FD1FC2}.Release|x64.Build.0 = Release|Any CPU
+		{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}.Debug|x64.Build.0 = Debug|Any CPU
+		{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}.Release|x64.ActiveCfg = Release|Any CPU
+		{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
