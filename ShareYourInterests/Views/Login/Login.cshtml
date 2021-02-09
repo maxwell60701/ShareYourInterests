@@ -1,14 +1,13 @@
-﻿@*
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-}
-<!DOCTYPE html>
-<html>
-<head>
-    <script src="js/userJs/Login.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="css/materialdesignicons.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"/>
+    <link rel="stylesheet" href="css/vue/vuetify.min.css" />
+
     <div id="app">
         <v-app id="inspire">
             <v-form>
@@ -70,5 +69,8 @@
             </v-form>
         </v-app>
     </div>
-</body>
-</html>
+}
+<script src="https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js"></script>
+<script src="js/vue/vue.min.js"></script>
+<script src="js/vue/vuetify.min.js"></script>
+<script src="js/userJs/Login.js"></script>

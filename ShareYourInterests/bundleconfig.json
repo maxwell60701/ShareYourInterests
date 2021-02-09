@@ -2,17 +2,39 @@
     {
         "outputFileName": "wwwroot/css/site.min.css",
         "inputFiles": [
-            "wwwroot/css/site.css",
+            "wwwroot/css/site.css"
+        ]
+    },
+    {
+        "outputFileName": "wwwroot/css/vue/vuetify.css",
+        "inputFiles": [
             "wwwroot/css/vue/vuetify.css"
+        ]
+    },
+    {
+        "outputFileName": "wwwroot/js/vue/vue.min.js",
+        "inputFiles": [
+            "wwwroot/js/vue/vue.js"
+        ]
+    },
+    {
+        "outputFileName": "wwwroot/js/vue/vuetify.min.js",
+        "inputFiles": [
+            "wwwroot/js/vue/vuetify.js"
+        ]
+    },
+    {
+        "outputFileName": "wwwroot/js/jquery/jquery.min.js",
+        "inputFiles": [
+            "wwwroot/js/jquery/jquery.js"
         ]
     },
     {
         "outputFileName": "wwwroot/js/site.min.js",
         "inputFiles": [
-            "wwwroot/js/site.js",
-            "wwwroot/js/vue/vue.js",
-            "wwwroot/js/vue/vuetify.js"
+            "wwwroot/js/site.js"
         ],
+
         "minify": {
             "enabled": true,
             "renameLocals": true
