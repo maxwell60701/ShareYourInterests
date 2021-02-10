@@ -10,13 +10,14 @@
 
     <div id="app">
         <v-app id="inspire">
-            <v-form style="margin-top:180px">
+            <v-form style="margin-top:300px">
                 <v-container fluid>
 
                     <v-col me="12"
-                           sm="3"
+                           lg="3"
                            class="float-right" style="margin-right:300px">
-                        <v-text-field :append-icon="'mdi-account'"
+                        <v-text-field v-model="userName" color="purple"
+                                      :append-icon="'mdi-account'"
                                       :rules="[rules.required, rules.min]"
                                       label="User Name"></v-text-field>
                     </v-col>
@@ -25,20 +26,29 @@
                     <br />
                     <br />
                     <v-col me="12"
-                           sm="3"
+                           lg="3"
                            class="float-right" style="margin-right:300px">
-                        <v-text-field :append-icon="show3 ? 'mdi-eye' : 'mdi-eye-off'"
+                        <v-text-field v-model="password" color="purple"
+                                      :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
                                       :rules="[rules.required, rules.min]"
-                                      :type="show3 ? 'text' : 'password'"
+                                      :type="showPassword ? 'text' : 'password'"
                                       name="input-10-2"
                                       label="User Password"
                                       hint="At least 8 characters"
-                                      value="wqfasds"
                                       class="input-group--focused"
-                                      v-on:click:append="show3 = !show3"></v-text-field>
+                                      v-on:click:append="showPassword = !showPassword"></v-text-field>
                     </v-col>
-
-
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div class="my-2 float-right col-lg-3" style="margin-right:300px">
+                        <v-btn class="col-12" x-large 
+                               color="purple lighten-3"
+                               dark>
+                            Login
+                        </v-btn>
+                    </div>
 
                 </v-container>
             </v-form>
