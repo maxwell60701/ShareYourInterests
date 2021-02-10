@@ -3,68 +3,43 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
-    <link rel="stylesheet" href="css/materialdesignicons.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons" />
+    <link rel="stylesheet" href="css/materialdesignicons.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" />
     <link rel="stylesheet" href="css/vue/vuetify.min.css" />
 
     <div id="app">
         <v-app id="inspire">
-            <v-form>
+            <v-form style="margin-top:180px">
                 <v-container fluid>
-                    <v-row>
-                        <v-col cols="12"
-                               sm="6">
-                            <v-text-field v-model="password"
-                                          :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-                                          :rules="[rules.required, rules.min]"
-                                          :type="show1 ? 'text' : 'password'"
-                                          name="input-10-1"
-                                          label="Normal with hint text"
-                                          hint="At least 8 characters"
-                                          counter
-                                          v-on:click :append="show1 = !show1"></v-text-field>
-                        </v-col>
 
-                        <v-col cols="12"
-                               sm="6">
-                            <v-text-field :append-icon="show2 ? 'mdi-eye' : 'mdi-eye-off'"
-                                          :rules="[rules.required, rules.min]"
-                                          :type="show2 ? 'text' : 'password'"
-                                          name="input-10-2"
-                                          label="Visible"
-                                          hint="At least 8 characters"
-                                          value="wqfasds"
-                                          class="input-group--focused"
-                                          v-on:click :append="show2 = !show2"></v-text-field>
-                        </v-col>
+                    <v-col me="12"
+                           sm="3"
+                           class="float-right" style="margin-right:300px">
+                        <v-text-field :append-icon="'mdi-account'"
+                                      :rules="[rules.required, rules.min]"
+                                      label="User Name"></v-text-field>
+                    </v-col>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <v-col me="12"
+                           sm="3"
+                           class="float-right" style="margin-right:300px">
+                        <v-text-field :append-icon="show3 ? 'mdi-eye' : 'mdi-eye-off'"
+                                      :rules="[rules.required, rules.min]"
+                                      :type="show3 ? 'text' : 'password'"
+                                      name="input-10-2"
+                                      label="User Password"
+                                      hint="At least 8 characters"
+                                      value="wqfasds"
+                                      class="input-group--focused"
+                                      v-on:click:append="show3 = !show3"></v-text-field>
+                    </v-col>
 
-                        <v-col cols="12"
-                               sm="6">
-                            <v-text-field :append-icon="show3 ? 'mdi-eye' : 'mdi-eye-off'"
-                                          :rules="[rules.required, rules.min]"
-                                          :type="show3 ? 'text' : 'password'"
-                                          name="input-10-2"
-                                          label="Not visible"
-                                          hint="At least 8 characters"
-                                          value="wqfasds"
-                                          class="input-group--focused"
-                                          v-on:click :append="show3 = !show3"></v-text-field>
-                        </v-col>
 
-                        <v-col cols="12"
-                               sm="6">
-                            <v-text-field :append-icon="show4 ? 'mdi-eye' : 'mdi-eye-off'"
-                                          :rules="[rules.required, rules.emailMatch]"
-                                          :type="show4 ? 'text' : 'password'"
-                                          name="input-10-2"
-                                          label="Error"
-                                          hint="At least 8 characters"
-                                          value="Pa"
-                                          error
-                                          v-on:click :append="show4 = !show4"></v-text-field>
-                        </v-col>
-                    </v-row>
+
                 </v-container>
             </v-form>
         </v-app>
