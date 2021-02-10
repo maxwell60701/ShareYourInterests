@@ -12,22 +12,16 @@
         <v-app id="inspire" style="background-color: gray">
             <v-form style="margin-top:300px">
                 <v-container fluid>
-                    <div>
-                        <v-col me="12"
-                               lg="3"
-                               class="float-right" style="margin-right: 300px">
+                    <div style="height:500px;width:33%; float: right; margin-right: 300px;background-color: white">
+                        <v-col me="12" style="margin-top:100px">
                             <v-text-field v-model="userAccount" color="purple"
                                           :append-icon="'mdi-account'"
                                           :rules="[rules.required, rules.min]"
                                           label="User Name"></v-text-field>
                         </v-col>
                         <br/>
-                        <br/>
-                        <br/>
-                        <br/>
                         <v-col me="12"
-                               lg="3"
-                               class="float-right" style="margin-right: 300px">
+                        >
                             <v-text-field v-model="userPassword" color="purple"
                                           :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
                                           :rules="[rules.required, rules.min]"
@@ -39,10 +33,8 @@
                                           v-on:click:append="showPassword = !showPassword"></v-text-field>
                         </v-col>
                         <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <v-col class="my-2 float-right col-lg-3" style="margin-right: 300px">
+                        
+                        <v-col class="my-2">
                             <v-btn class="col-12" x-large
                                    color="purple lighten-3"
                                    dark>
