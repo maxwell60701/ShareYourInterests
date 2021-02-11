@@ -9,43 +9,53 @@
     <link rel="stylesheet" href="css/vue/vuetify.min.css" />
 
     <div id="app" >
-        <v-app id="inspire" style="background-color: gray">
-            <v-form style="margin-top:300px">
-                <v-container fluid>
-                    <div style="height:500px;width:33%; float: right; margin-right: 300px;background-color: white">
-                        <v-col me="12" style="margin-top:100px">
-                            <v-text-field v-model="userAccount" color="purple"
-                                          :append-icon="'mdi-account'"
-                                          :rules="[rules.required, rules.min]"
-                                          label="User Name"></v-text-field>
-                        </v-col>
-                        <br/>
-                        <v-col me="12"
-                        >
-                            <v-text-field v-model="userPassword" color="purple"
-                                          :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-                                          :rules="[rules.required, rules.min]"
-                                          :type="showPassword ? 'text' : 'password'"
-                                          name="input-10-2"
-                                          label="User Password"
-                                          hint="At least 8 characters"
-                                          class="input-group--focused"
-                                          v-on:click:append="showPassword = !showPassword"></v-text-field>
-                        </v-col>
-                        <br/>
-                        
-                        <v-col class="my-2">
-                            <v-btn class="col-12" x-large
-                                   color="purple lighten-3"
-                                   dark>
-                                Login
-                            </v-btn>
-                        </v-col>
-                    </div>
-                   
+        <v-app id="inspire" style="background-color: black">
+            <div style="height: 200px;"></div>
+            <div style="height: 600px">
+                <v-form>
+                    <v-container fluid>
+                        <div style="width: 500px; height: 550px; position: absolute; right: 300px; background-color: white; border-radius: 20px">
+                            <div id="container" style="padding: 25px 25px 23px">
+                                <v-col me="12" style="text-align: center">
+                                    <v-avatar color="purple lighten-3" size="100">
+                                        <img src="images/avatar.png"
+                                             alt="Avatar">
+                                    </v-avatar>
+                                </v-col>
+                                <v-col me="12">
+                                    <v-text-field v-model="userAccount" color="purple"
+                                                  :append-icon="'mdi-account'"
+                                                  :rules="[rules.required, rules.min]"
+                                                  label="User Name"></v-text-field>
+                                </v-col>
+                                <br />
+                                <v-col me="12">
+                                    <v-text-field v-model="userPassword" color="purple"
+                                                  :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+                                                  :rules="[rules.required, rules.min]"
+                                                  :type="showPassword ? 'text' : 'password'"
+                                                  name="input-10-2"
+                                                  label="User Password"
+                                                  hint="At least 8 characters"
+                                                  class="input-group--focused"
+                                                  v-on:click:append="showPassword = !showPassword"></v-text-field>
+                                </v-col>
+                                <br />
 
-                </v-container>
-            </v-form>
+                                <v-col class="my-2">
+                                    <v-btn class="col-12" x-large
+                                           color="purple lighten-3"
+                                           dark>
+                                        Login
+                                    </v-btn>
+                                </v-col>
+                            </div>
+                        </div>
+                    </v-container>
+                </v-form>
+            </div>
+           
+            <div style="height: 370px;"></div>
         </v-app>
     </div>
 }
