@@ -1,0 +1,31 @@
+﻿.login-box {
+    width: 500px;
+    height: 550px;
+    position: absolute;
+    right: 300px;
+    background-color: white;
+    border-radius: 20px
+}
+
+.login-container {
+    padding: 25px 25px 23px
+}
+
+.login-title {
+    height: 200px;
+}
+
+.login-content {
+    height: 600px;
+}
+
+.login-footer {
+    height: 370px;
+}
+
+.login-app {
+    background-color: black!important
+}
+.element-center {
+    text-align: center
+}

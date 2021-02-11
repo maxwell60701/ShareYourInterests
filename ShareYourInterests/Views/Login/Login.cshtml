@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="css/materialdesignicons.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" />
     <link rel="stylesheet" href="css/vue/vuetify.min.css" />
-
+    <link rel="stylesheet" href="css/StyleSheet.css" />
     <div id="app" >
-        <v-app id="inspire" style="background-color: black">
-            <div style="height: 200px;"></div>
-            <div style="height: 600px">
+        <v-app id="inspire" class="login-app">
+            <div class="login-title"></div>
+            <div class="login-content">
                 <v-form>
                     <v-container fluid>
-                        <div style="width: 500px; height: 550px; position: absolute; right: 300px; background-color: white; border-radius: 20px">
-                            <div id="container" style="padding: 25px 25px 23px">
-                                <v-col me="12" style="text-align: center">
+                        <div class="login-box">
+                            <div class="login-container">
+                                <v-col me="12" class="element-center">
                                     <v-avatar color="purple lighten-3" size="100">
                                         <img src="images/avatar.png"
                                              alt="Avatar">
@@ -41,7 +41,6 @@
                                                   v-on:click:append="showPassword = !showPassword"></v-text-field>
                                 </v-col>
                                 <br />
-
                                 <v-col class="my-2">
                                     <v-btn class="col-12" x-large
                                            color="purple lighten-3"
@@ -54,8 +53,7 @@
                     </v-container>
                 </v-form>
             </div>
-           
-            <div style="height: 370px;"></div>
+            <div class="login-footer"></div>
         </v-app>
     </div>
 }
