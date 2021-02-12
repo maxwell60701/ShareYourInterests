@@ -4,7 +4,9 @@
     position: absolute;
     right: 300px;
     background-color: white;
-    border-radius: 20px
+    border-radius: 20px;
+    border-style: solid;
+    border-color: violet;
 }
 
 .login-container {
@@ -17,6 +19,8 @@
 
 .login-content {
     height: 574px;
+    background: url(../images/triangles.png);
+    background-attachment: fixed;
 }
 
 .login-footer {
@@ -28,4 +32,11 @@
 }
 .element-center {
     text-align: center
+}
+.font-title {
+    padding-left: 20px;
+    color: #CE93D8;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 72px;
 }
