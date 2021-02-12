@@ -12,11 +12,11 @@
 }
 
 .login-title {
-    height: 200px;
+    height: 72px;
 }
 
 .login-content {
-    height: 600px;
+    height: 574px;
 }
 
 .login-footer {
@@ -24,7 +24,7 @@
 }
 
 .login-app {
-    background-color: black!important
+    background-color: white!important
 }
 .element-center {
     text-align: center
