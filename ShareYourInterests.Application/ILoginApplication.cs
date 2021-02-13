@@ -10,6 +10,6 @@ namespace ShareYourInterests.Application
 {
     public  interface ILoginApplication
     {
-        Response UserLogin(LoginUserModel loginUserModel);
+        Response UserLogin(LoginInputModel loginInputModel);
     }
 }

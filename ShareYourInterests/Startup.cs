@@ -33,7 +33,7 @@ namespace ShareYourInterests
            // services.AddDbContext<ShareYourInterestsDbContext>(options =>
                // options.UseSqlServer(Configuration.GetConnectionString("ShareYourInterestsDbContext")));
             services.AddDatabaseDeveloperPageExceptionFilter();
-            services.AddScoped<ILoginApplication,LoginApplication>();
+            AddDependencyInjection(services);
             services.AddRazorPages();
         }
 
@@ -63,6 +63,15 @@ namespace ShareYourInterests
                     name: "default",
                     pattern: "{controller=Login}/{action=Login}/{id?}");
             });
+        }
+
+        /// <summary>
+        /// add DI
+        /// </summary>
+        /// <param name="services"></param>
+        private void AddDependencyInjection(IServiceCollection services)
+        {
+            services.AddScoped<ILoginApplication, LoginApplication>();
         }
     }
 }

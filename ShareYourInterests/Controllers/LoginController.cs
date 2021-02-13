@@ -23,12 +23,12 @@ namespace ShareYourInterests.MVC.Controllers
             return View();
         }
 
-        public Response UserLogin(LoginUserModel loginUserModel)
+        public Response UserLogin(LoginInputModel loginInputModel)
         {
             var result = new Response();
             try
             {
-                result = _ILoginApplication.UserLogin(loginUserModel);
+                result = _ILoginApplication.UserLogin(loginInputModel);
             }
             catch (Exception ex)
             {

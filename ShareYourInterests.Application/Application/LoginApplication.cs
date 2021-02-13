@@ -10,8 +10,9 @@ namespace ShareYourInterests.Application.Application
 {
     public class LoginApplication:ILoginApplication
     {
-        public Response UserLogin(LoginUserModel loginUserModel)
+        public Response UserLogin(LoginInputModel loginInputModel)
         {
+
             return new Response(){Code = 200};
         }
     }

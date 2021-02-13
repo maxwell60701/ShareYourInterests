@@ -27,8 +27,8 @@ namespace ShareYourInterests.ConsoleTest
                 try
                 {
                     var context = services.GetRequiredService<ShareYourInterestsDbContext>();
-                     context.Database.EnsureCreated();
-                    // DbInitializer.Initialize(context);
+                     //context.Database.EnsureCreated();
+                     DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {
