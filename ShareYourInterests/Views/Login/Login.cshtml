@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" />
     <link rel="stylesheet" href="css/vue/vuetify.min.css" />
     <link rel="stylesheet" href="css/StyleSheet.css" />
-    <div id="app" >
+    <div id="app">
         <v-app id="inspire" class="login-app">
             <div class="login-title">
                 <span class="font-title">ShareYourInterests</span>
@@ -46,7 +46,7 @@
                                 <v-col class="my-2">
                                     <v-btn class="col-12" x-large
                                            color="purple lighten-3"
-                                           dark>
+                                           dark v-on:click="Login">
                                         Login
                                     </v-btn>
                                 </v-col>
@@ -62,4 +62,5 @@
 <script src="https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js"></script>
 <script src="js/vue/vue.min.js"></script>
 <script src="js/vue/vuetify.min.js"></script>
+<script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
 <script src="js/userJs/Login.js"></script>

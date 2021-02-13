@@ -12,4 +12,15 @@
             },
         }
     },
+    methods:
+    {
+        Login() {
+            this.$http.post('/Login/UserLogin', { UserName: this.userAccount, Password: this.userPassword }).then(
+                function (result) {
+                    if (result.body.code == 200) {
+                        window.location.href = "Home/Index";
+                    }
+                });
+        }
+    }
 })

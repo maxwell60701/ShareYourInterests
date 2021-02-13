@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ShareYourInterests.Application\ShareYourInterests.Application.csproj" />
     <ProjectReference Include="..\ShareYourInterests.Entity\ShareYourInterests.Entity.csproj" />
   </ItemGroup>
 

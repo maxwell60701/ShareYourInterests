@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using ShareYourInterests.Application;
+using ShareYourInterests.Application.Application;
 using ShareYourInterests.Entity;
 
 namespace ShareYourInterests
@@ -31,6 +33,8 @@ namespace ShareYourInterests
            // services.AddDbContext<ShareYourInterestsDbContext>(options =>
                // options.UseSqlServer(Configuration.GetConnectionString("ShareYourInterestsDbContext")));
             services.AddDatabaseDeveloperPageExceptionFilter();
+            services.AddScoped<ILoginApplication,LoginApplication>();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
