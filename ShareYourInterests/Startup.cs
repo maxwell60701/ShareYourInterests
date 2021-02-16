@@ -12,6 +12,8 @@ using Microsoft.EntityFrameworkCore;
 using ShareYourInterests.Application;
 using ShareYourInterests.Application.Application;
 using ShareYourInterests.Entity;
+using ShareYourInterests.Infrastructure;
+using ShareYourInterests.Infrastructure.Interface;
 
 namespace ShareYourInterests
 {
@@ -29,7 +31,7 @@ namespace ShareYourInterests
         {
             services.AddControllersWithViews();
             services.AddDbContext<ShareYourInterestsDbContext>(options =>
-                options.UseSqlServer("Data Source =.; Initial Catalog = ShareYourInterests; User = sa; Password = 123"));
+                options.UseSqlServer("Data Source =.; Initial Catalog = ShareYourInterests; User = sa; UserPassword = 123"));
            // services.AddDbContext<ShareYourInterestsDbContext>(options =>
                // options.UseSqlServer(Configuration.GetConnectionString("ShareYourInterestsDbContext")));
             services.AddDatabaseDeveloperPageExceptionFilter();
@@ -72,6 +74,7 @@ namespace ShareYourInterests
         private void AddDependencyInjection(IServiceCollection services)
         {
             services.AddScoped<ILoginApplication, LoginApplication>();
+            services.AddScoped(typeof(IRepository<,>), typeof(BaseRepository<,>));
         }
     }
 }

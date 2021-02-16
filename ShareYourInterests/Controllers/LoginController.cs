@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using ShareYourInterests.Application;
 using ShareYourInterests.Application.Application;
 using ShareYourInterests.Application.Request;
+using ShareYourInterests.Entity;
 using ShareYourInterests.Infrastructure;
+using ShareYourInterests.Infrastructure.Interface;
 
 namespace ShareYourInterests.MVC.Controllers
 {
@@ -22,7 +24,7 @@ namespace ShareYourInterests.MVC.Controllers
         {
             return View();
         }
-
+        [HttpPost]
         public Response UserLogin(LoginInputModel loginInputModel)
         {
             var result = new Response();
