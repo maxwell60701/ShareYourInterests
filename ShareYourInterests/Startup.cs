@@ -31,7 +31,7 @@ namespace ShareYourInterests
         {
             services.AddControllersWithViews();
             services.AddDbContext<ShareYourInterestsDbContext>(options =>
-                options.UseSqlServer("Data Source =.; Initial Catalog = ShareYourInterests; User = sa; UserPassword = 123"));
+                options.UseSqlServer("Data Source =.; Initial Catalog = ShareYourInterests; User = sa; Password = 123"));
            // services.AddDbContext<ShareYourInterestsDbContext>(options =>
                // options.UseSqlServer(Configuration.GetConnectionString("ShareYourInterestsDbContext")));
             services.AddDatabaseDeveloperPageExceptionFilter();

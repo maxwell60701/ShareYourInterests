@@ -25,7 +25,7 @@ namespace ShareYourInterests.MVC.Controllers
             return View();
         }
         [HttpPost]
-        public Response UserLogin(LoginInputModel loginInputModel)
+        public Response UserLogin([FromBody]LoginInputModel loginInputModel)
         {
             var result = new Response();
             try
