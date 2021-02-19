@@ -30,10 +30,10 @@ namespace ShareYourInterests
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //services.AddDbContext<ShareYourInterestsDbContext>(options =>
+            //    options.UseSqlServer("Data Source =.; Initial Catalog = ShareYourInterests; User = sa; Password = 123"));
             services.AddDbContext<ShareYourInterestsDbContext>(options =>
-                options.UseSqlServer("Data Source =.; Initial Catalog = ShareYourInterests; User = sa; Password = 123"));
-           // services.AddDbContext<ShareYourInterestsDbContext>(options =>
-               // options.UseSqlServer(Configuration.GetConnectionString("ShareYourInterestsDbContext")));
+                options.UseSqlServer(Configuration.GetConnectionString("ShareYourInterestsDbContext")));
             services.AddDatabaseDeveloperPageExceptionFilter();
             AddDependencyInjection(services);
             services.AddRazorPages();
