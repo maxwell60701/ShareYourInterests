@@ -5,25 +5,29 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using ShareYourInterests.Application;
+using ShareYourInterests.Infrastructure.Cache;
 
 namespace ShareYourInterests.MVC.Filters
 {
     public class ActionFilter : IActionFilter
     {
         private readonly ILoginApplication _loginApplication;
-        public ActionFilter(ILoginApplication loginApplication)
+        private readonly ICacheContext _icacheContext;
+        public ActionFilter(ILoginApplication loginApplication, ICacheContext icacheContext)
         {
             _loginApplication = loginApplication;
+            _icacheContext = icacheContext;
         }
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            if (!_loginApplication.CheckLogin())
-            {
-               // context.Result = new RedirectResult("/Login/Login");
-            }
-        }  
-        
+            //有重定向的BUG
+            //if (_loginApplication.CheckLogin() && _icacheContext.Get<string>("LoginToken") != null)
+            //{
+            //    context.Result = new RedirectResult("/Home/Index");
+            //}
+        }
+
         public void OnActionExecuted(ActionExecutedContext context)
         {
             return;

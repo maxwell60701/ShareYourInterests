@@ -31,7 +31,7 @@ namespace ShareYourInterests
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews(option=>option.Filters.Add<ActionFilter>());
+            services.AddControllersWithViews();
             //services.AddDbContext<ShareYourInterestsDbContext>(options =>
             //    options.UseSqlServer("Data Source =.; Initial Catalog = ShareYourInterests; User = sa; Password = 123"));
             services.AddDbContext<ShareYourInterestsDbContext>(options =>

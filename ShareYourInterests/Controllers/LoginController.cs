@@ -9,6 +9,7 @@ using ShareYourInterests.Application.Application;
 using ShareYourInterests.Application.Request;
 using ShareYourInterests.Entity;
 using ShareYourInterests.Infrastructure;
+using ShareYourInterests.Infrastructure.Cache;
 using ShareYourInterests.Infrastructure.Interface;
 
 namespace ShareYourInterests.MVC.Controllers
@@ -16,14 +17,25 @@ namespace ShareYourInterests.MVC.Controllers
     public class LoginController : Controller
     {
         private ILoginApplication _ILoginApplication;
+        private readonly ICacheContext _icacheContext;
 
-        public LoginController(ILoginApplication loginApplication)
+        public LoginController(ILoginApplication loginApplication, ICacheContext icacheContext)
         {
             _ILoginApplication = loginApplication;
+            _icacheContext = icacheContext;
         }
         public IActionResult Login()
         {
             return View();
+        }
+
+        public override void OnActionExecuting(ActionExecutingContext context)
+        {
+            base.OnActionExecuting(context);
+            if (_ILoginApplication.CheckLogin() && _icacheContext.Get<string>("LoginToken") != null)
+            {
+                context.Result = new RedirectResult("/Home/Index");
+            }
         }
 
         [HttpPost]
