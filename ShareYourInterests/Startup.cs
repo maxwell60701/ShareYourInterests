@@ -13,7 +13,9 @@ using ShareYourInterests.Application;
 using ShareYourInterests.Application.Application;
 using ShareYourInterests.Entity;
 using ShareYourInterests.Infrastructure;
+using ShareYourInterests.Infrastructure.Cache;
 using ShareYourInterests.Infrastructure.Interface;
+using ShareYourInterests.MVC.Filters;
 
 namespace ShareYourInterests
 {
@@ -29,7 +31,7 @@ namespace ShareYourInterests
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(option=>option.Filters.Add<ActionFilter>());
             //services.AddDbContext<ShareYourInterestsDbContext>(options =>
             //    options.UseSqlServer("Data Source =.; Initial Catalog = ShareYourInterests; User = sa; Password = 123"));
             services.AddDbContext<ShareYourInterestsDbContext>(options =>
@@ -74,6 +76,7 @@ namespace ShareYourInterests
         private void AddDependencyInjection(IServiceCollection services)
         {
             services.AddScoped<ILoginApplication, LoginApplication>();
+            services.AddScoped<ICacheContext, CacheContext>();
             services.AddScoped(typeof(IRepository<,>), typeof(BaseRepository<,>));
         }
     }

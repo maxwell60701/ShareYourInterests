@@ -27,5 +27,10 @@ namespace ShareYourInterests.Application.Application
 
             return new Response() { Code = 500 };
         }
+
+        public bool CheckLogin()
+        {
+            return false;
+        }
     }
 }

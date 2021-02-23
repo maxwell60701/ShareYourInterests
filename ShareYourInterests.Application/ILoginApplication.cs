@@ -8,8 +8,10 @@ using ShareYourInterests.Infrastructure;
 
 namespace ShareYourInterests.Application
 {
-    public  interface ILoginApplication
+    public interface ILoginApplication
     {
         Response UserLogin(LoginInputModel loginInputModel);
+
+        bool CheckLogin();
     }
 }
