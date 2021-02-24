@@ -33,20 +33,20 @@
                                 <br />
                                 <v-col me="12">
                                     <v-text-field v-model="userPassword" color="purple"
-                                                  :append-icon="showUserPassword ? 'mdi-eye' : 'mdi-eye-off'"
+                                                  :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
                                                   :rules="[rules.required, rules.min]"
-                                                  :type="showUserPassword ? 'text' : 'password'"
+                                                  :type="showPassword ? 'text' : 'password'"
                                                   name="input-10-2"
                                                   label="UserPassword"
                                                   hint="At least 8 characters"
                                                   class="input-group--focused"
-                                                  v-on:click:append="showUserPassword = !showUserPassword"></v-text-field>
+                                                  v-on:click:append="showPassword = !showPassword"></v-text-field>
                                 </v-col>
                                 <br />
                                 <v-col class="my-2">
                                     <v-btn class="col-12" x-large
                                            color="purple lighten-3"
-                                           dark v-on:click="Login">
+                                           dark v-on:click="Login" >
                                         Login
                                     </v-btn>
                                 </v-col>
