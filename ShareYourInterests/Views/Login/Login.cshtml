@@ -27,7 +27,7 @@
                                 <v-col me="12">
                                     <v-text-field v-model="userAccount" color="purple"
                                                   :append-icon="'mdi-account'"
-                                                  :rules="[rules.required, rules.min]"
+                                                  :rules="[rules.required]"
                                                   label="User Name"></v-text-field>
                                 </v-col>
                                 <br />
@@ -46,8 +46,8 @@
                                 <v-col class="my-2">
                                     <v-btn class="col-12 white--text" x-large
                                            :disabled="isButtonDisabled"
-                                           color="purple lighten-3" 
-                                            v-on:click="Login" >
+                                           color="purple lighten-3"
+                                           v-on:click="Login">
                                         Login
                                     </v-btn>
                                 </v-col>
@@ -56,7 +56,13 @@
                     </v-container>
                 </v-form>
             </div>
-            <div class="login-footer"></div>
+            <div class="login-footer">
+                <div v-if="showAlert" class="show-Alert">
+                    <v-alert type="error">
+                       Login Failed
+                    </v-alert>
+                </div>
+            </div>
         </v-app>
     </div>
 }

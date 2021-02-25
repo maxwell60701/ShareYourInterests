@@ -40,3 +40,8 @@
     font-weight: bold;
     line-height: 72px;
 }
+.show-Alert {
+    bottom: 0;
+    position: absolute;
+    width: 100%
+}
