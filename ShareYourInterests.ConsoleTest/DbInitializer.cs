@@ -20,7 +20,7 @@ namespace ShareYourInterests.ConsoleTest
 
             var users = new User[]
             {
-                new User{UserName="test",UserPassword="111"},
+                new User{UserName="test",UserPassword="12345678"},
             };
 
             context.Users.AddRange(users);

@@ -22,5 +22,11 @@
                     }
                 });
         }
+    },
+    computed:
+    {
+        isButtonDisabled() {
+            return this.userPassword.length < 8 || this.userAccount.length===0;
+        }
     }
 })

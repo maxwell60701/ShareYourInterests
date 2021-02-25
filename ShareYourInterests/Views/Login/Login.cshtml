@@ -44,9 +44,10 @@
                                 </v-col>
                                 <br />
                                 <v-col class="my-2">
-                                    <v-btn class="col-12" x-large
-                                           color="purple lighten-3"
-                                           dark v-on:click="Login" >
+                                    <v-btn class="col-12 white--text" x-large
+                                           :disabled="isButtonDisabled"
+                                           color="purple lighten-3" 
+                                            v-on:click="Login" >
                                         Login
                                     </v-btn>
                                 </v-col>
