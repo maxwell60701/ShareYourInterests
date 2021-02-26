@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using ShareYourInterests.Application;
+using ShareYourInterests.Application.Interface;
 using ShareYourInterests.Application.Application;
 using ShareYourInterests.Entity;
 using ShareYourInterests.Infrastructure;

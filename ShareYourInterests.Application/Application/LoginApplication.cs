@@ -1,8 +1,7 @@
 ﻿using System;
-using ShareYourInterests.Application.Request;
+using ShareYourInterests.Application.Input;
+using ShareYourInterests.Application.Interface;
 using ShareYourInterests.Entity;
-using ShareYourInterests.Infrastructure;
-using ShareYourInterests.Infrastructure.Cache;
 using ShareYourInterests.Infrastructure.Interface;
 
 namespace ShareYourInterests.Application.Application
@@ -10,29 +9,25 @@ namespace ShareYourInterests.Application.Application
     public class LoginApplication : ILoginApplication
     {
         private IRepository<User, ShareYourInterestsDbContext> _userRepository;
-        private ICacheContext _iCacheContext;
 
-        public LoginApplication(IRepository<User, ShareYourInterestsDbContext> userRepository, ICacheContext iCacheContext)
+        public LoginApplication(IRepository<User, ShareYourInterestsDbContext> userRepository)
         {
             _userRepository = userRepository;
-            _iCacheContext = iCacheContext;
         }
-        public Response UserLogin(LoginInputModel loginInputModel)
+        public LoginOutPutModel UserLogin(LoginOutPutModel loginInputModel)
         {
-            var result = new Response();
             var userEntity = _userRepository.FirstOrDefault(u =>
                   u.UserName == loginInputModel.UserAccount && u.UserPassword == loginInputModel.UserPassword);
             if (userEntity != null)
             {
-                _iCacheContext.Set("LoginToken", userEntity.UserName, DateTime.Now.AddDays(10));
-                result =new Response() { Code = 200 };
+                var result = new LoginOutPutModel
+                {
+                    UserAccount = userEntity.UserName,
+                    UserPassword = userEntity.UserPassword
+                };
+                return result;
             }
-            else
-            {
-                result = new Response() { Code = 500 };
-            }
-
-            return result;
+            return null;
         }
 
         public bool CheckLogin()

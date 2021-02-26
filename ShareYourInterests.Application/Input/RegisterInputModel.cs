@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ShareYourInterests.Application.Request
+namespace ShareYourInterests.Application.Input
 {
-    public class LoginInputModel
+    public class RegisterInputModel
     {
         public string UserAccount { get; set; }
         public string UserPassword { get; set; }

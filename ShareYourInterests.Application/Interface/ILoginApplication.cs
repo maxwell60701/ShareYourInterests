@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ShareYourInterests.Application.Request;
+using ShareYourInterests.Application.Input;
 using ShareYourInterests.Infrastructure;
 
-namespace ShareYourInterests.Application
+namespace ShareYourInterests.Application.Interface
 {
     public interface ILoginApplication
     {
-        Response UserLogin(LoginInputModel loginInputModel);
+        LoginOutPutModel UserLogin(LoginOutPutModel loginInputModel);
 
         bool CheckLogin();
     }

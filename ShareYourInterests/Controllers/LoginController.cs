@@ -4,25 +4,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using ShareYourInterests.Application;
+using ShareYourInterests.Application.Interface;
 using ShareYourInterests.Application.Application;
-using ShareYourInterests.Application.Request;
-using ShareYourInterests.Entity;
+using ShareYourInterests.Application.Input;
 using ShareYourInterests.Infrastructure;
 using ShareYourInterests.Infrastructure.Cache;
-using ShareYourInterests.Infrastructure.Interface;
 
 namespace ShareYourInterests.MVC.Controllers
 {
     public class LoginController : Controller
     {
         private ILoginApplication _ILoginApplication;
-        private readonly ICacheContext _icacheContext;
+        private readonly ICacheContext _iCacheContext;
 
-        public LoginController(ILoginApplication loginApplication, ICacheContext icacheContext)
+        public LoginController(ILoginApplication loginApplication, ICacheContext iCacheContext)
         {
             _ILoginApplication = loginApplication;
-            _icacheContext = icacheContext;
+            _iCacheContext = iCacheContext;
         }
         public IActionResult Login()
         {
@@ -32,25 +30,31 @@ namespace ShareYourInterests.MVC.Controllers
         public override void OnActionExecuting(ActionExecutingContext context)
         {
             base.OnActionExecuting(context);
-            if (_ILoginApplication.CheckLogin() && _icacheContext.Get<string>("LoginToken") != null)
+            if (_ILoginApplication.CheckLogin() && _iCacheContext.Get<string>("LoginToken") != null)
             {
                 context.Result = new RedirectResult("/Home/Index");
             }
         }
 
         [HttpPost]
-        public Response UserLogin([FromBody]LoginInputModel loginInputModel)
+        public Response UserLogin([FromBody] LoginOutPutModel loginInputModel)
         {
-            var result = new Response();
+            var response = new Response() { Code = 500 };
             try
             {
-                result = _ILoginApplication.UserLogin(loginInputModel);
+                var result = _ILoginApplication.UserLogin(loginInputModel);
+                if (result != null)
+                {
+                     _iCacheContext.Set("LoginToken", result.UserAccount, DateTime.Now.AddDays(10));
+                    response.Code = 200;
+                }
+                return response;
             }
             catch (Exception ex)
             {
 
             }
-            return result;
+            return response;
         }
     }
 }
