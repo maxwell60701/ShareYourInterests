@@ -11,6 +11,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.OpenApi.Models;
+using ShareYourInterests.Application.Application;
+using ShareYourInterests.Application.Interface;
+using ShareYourInterests.Infrastructure;
+using ShareYourInterests.Infrastructure.Interface;
 
 namespace ShareYourInterests.WebApi
 {
@@ -27,6 +31,7 @@ namespace ShareYourInterests.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            AddDependencyInjection(services);
             services.AddSwaggerGen(option =>
             {
                 option.SwaggerDoc("v1", new OpenApiInfo
@@ -66,6 +71,16 @@ namespace ShareYourInterests.WebApi
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
+        }
+
+        /// <summary>
+        /// add DI
+        /// </summary>
+        /// <param name="services"></param>
+        private void AddDependencyInjection(IServiceCollection services)
+        {
+            services.AddScoped<IRegisterApplication, RegisterApplication>();
+            services.AddScoped(typeof(IRepository<,>), typeof(BaseRepository<,>));
         }
     }
 }

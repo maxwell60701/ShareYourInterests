@@ -76,6 +76,7 @@ namespace ShareYourInterests
         private void AddDependencyInjection(IServiceCollection services)
         {
             services.AddScoped<ILoginApplication, LoginApplication>();
+            services.AddScoped<IRegisterApplication, RegisterApplication>();
             services.AddScoped<ICacheContext, CacheContext>();
             services.AddScoped(typeof(IRepository<,>), typeof(BaseRepository<,>));
         }

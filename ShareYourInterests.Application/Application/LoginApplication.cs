@@ -16,6 +16,9 @@ namespace ShareYourInterests.Application.Application
         }
         public LoginOutPutModel UserLogin(LoginOutPutModel loginInputModel)
         {
+            if (loginInputModel == null)
+                return null;
+
             var userEntity = _userRepository.FirstOrDefault(u =>
                   u.UserName == loginInputModel.UserAccount && u.UserPassword == loginInputModel.UserPassword);
             if (userEntity != null)
