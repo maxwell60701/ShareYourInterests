@@ -10,9 +10,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using ShareYourInterests.Application.Application;
 using ShareYourInterests.Application.Interface;
+using ShareYourInterests.Entity;
 using ShareYourInterests.Infrastructure;
 using ShareYourInterests.Infrastructure.Interface;
 
@@ -31,6 +33,8 @@ namespace ShareYourInterests.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<ShareYourInterestsDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("ShareYourInterestsDbContext")));
             AddDependencyInjection(services);
             services.AddSwaggerGen(option =>
             {
