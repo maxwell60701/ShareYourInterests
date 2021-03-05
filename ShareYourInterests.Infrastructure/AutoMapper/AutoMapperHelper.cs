@@ -35,23 +35,5 @@ namespace ShareYourInterests.Infrastructure.AutoMapper
             var mapper = config.CreateMapper();
             return mapper.Map<List<TDestination>>(source);
         }
-
-        /// <summary>
-        /// 类型映射
-        /// </summary>
-        public static TDestination MapTo<TSource, TDestination>(this TSource source, TDestination destination)
-            where TSource : class
-            where TDestination : class
-        {
-            return source.MapTo<TDestination>();
-        }
-
-        /// <summary>
-        /// 集合列表类型映射
-        /// </summary>
-        public static List<TDestination> MapToList<TSource, TDestination>(this IEnumerable<TSource> source)
-        {
-            return source.MapToList<TDestination>();
-        }
     }
 }

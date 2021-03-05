@@ -20,8 +20,7 @@ namespace ShareYourInterests.UnitTest
                 UserAccount = "test",
                 UserPassword = "1111"
             };
-            var loginOutPutModel = new LoginOutPutModel();
-            loginInputModel.MapTo(loginOutPutModel);
+           var loginOutPutModel= loginInputModel.MapTo<LoginOutPutModel>();
         }
     }
 }
