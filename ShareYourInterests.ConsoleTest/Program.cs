@@ -12,11 +12,13 @@ namespace ShareYourInterests.ConsoleTest
     {
         public static void Main(string[] args)
         {
-            var host = CreateHostBuilder(args).Build();
+            // var host = CreateHostBuilder(args).Build();
 
-            CreateDbIfNotExists(host);
+            //CreateDbIfNotExists(host);
 
-            host.Run();
+            //host.Run();
+
+            MapperTest.LoginMapper();
         }
 
         private static void CreateDbIfNotExists(IHost host)
@@ -27,7 +29,7 @@ namespace ShareYourInterests.ConsoleTest
                 try
                 {
                     var context = services.GetRequiredService<ShareYourInterestsDbContext>();
-                     //context.Database.EnsureCreated();
+                    //context.Database.EnsureCreated();
                      DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)

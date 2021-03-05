@@ -1,6 +1,7 @@
 ﻿using System;
 using ShareYourInterests.Application.Input;
 using ShareYourInterests.Application.Interface;
+using ShareYourInterests.Application.Output;
 using ShareYourInterests.Entity;
 using ShareYourInterests.Infrastructure.Interface;
 
@@ -14,7 +15,7 @@ namespace ShareYourInterests.Application.Application
         {
             _userRepository = userRepository;
         }
-        public LoginOutPutModel UserLogin(LoginOutPutModel loginInputModel)
+        public LoginOutPutModel UserLogin(LoginInPutModel loginInputModel)
         {
             if (loginInputModel == null)
                 return null;

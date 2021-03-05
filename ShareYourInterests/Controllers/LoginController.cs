@@ -37,7 +37,7 @@ namespace ShareYourInterests.MVC.Controllers
         }
 
         [HttpPost]
-        public Response UserLogin([FromBody] LoginOutPutModel loginInputModel)
+        public Response UserLogin([FromBody] LoginInPutModel loginInputModel)
         {
             var response = new Response() { Code = 500 };
             try

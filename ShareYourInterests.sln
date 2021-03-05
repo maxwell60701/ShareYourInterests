@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareYourInterests.Infrastr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareYourInterests.ConsoleTest", "ShareYourInterests.ConsoleTest\ShareYourInterests.ConsoleTest.csproj", "{DB37992E-2E0F-4E18-8201-EE29D0FD1FC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareYourInterests.Migration", "ShareYourInterests.Migration\ShareYourInterests.Migration.csproj", "{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareYourInterests.Migration", "ShareYourInterests.Migration\ShareYourInterests.Migration.csproj", "{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareYourInterests.UnitTest", "ShareYourInterests.UnitTest\ShareYourInterests.UnitTest.csproj", "{1D1EA99C-3E5F-432E-969B-0C75957C41C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,14 @@ Global
 		{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}.Release|x64.ActiveCfg = Release|Any CPU
 		{447ECA6C-3C8B-4602-8C61-341C6CAC98C7}.Release|x64.Build.0 = Release|Any CPU
+		{1D1EA99C-3E5F-432E-969B-0C75957C41C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D1EA99C-3E5F-432E-969B-0C75957C41C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D1EA99C-3E5F-432E-969B-0C75957C41C8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1D1EA99C-3E5F-432E-969B-0C75957C41C8}.Debug|x64.Build.0 = Debug|Any CPU
+		{1D1EA99C-3E5F-432E-969B-0C75957C41C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D1EA99C-3E5F-432E-969B-0C75957C41C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D1EA99C-3E5F-432E-969B-0C75957C41C8}.Release|x64.ActiveCfg = Release|Any CPU
+		{1D1EA99C-3E5F-432E-969B-0C75957C41C8}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
